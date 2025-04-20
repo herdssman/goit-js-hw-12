@@ -92,7 +92,6 @@ form.addEventListener('submit', async (event) => {
 
 btn.addEventListener('click', async (event) => {
     event.preventDefault();
-    showLoader();
 
     page += 1;
 
