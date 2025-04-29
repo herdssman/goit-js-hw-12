@@ -40,7 +40,6 @@ function removeEndMessage() {
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    showLoader();
 
     query = input.value.trim();
     page = 1;
@@ -53,11 +52,12 @@ form.addEventListener('submit', async (event) => {
             color: 'yellow',
             position: 'topRight',
         })
-        hideLoader();
         clearGallery();
         hideLoadMoreButton();
         return;
     }
+
+    showLoader();
 
     try {
         const data = await getImagesByQuery(query, page, limit);
