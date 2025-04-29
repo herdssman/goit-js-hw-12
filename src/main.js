@@ -54,6 +54,8 @@ form.addEventListener('submit', async (event) => {
             position: 'topRight',
         })
         hideLoader();
+        clearGallery();
+        hideLoadMoreButton();
         return;
     }
 
